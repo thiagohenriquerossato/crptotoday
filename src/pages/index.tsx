@@ -62,6 +62,7 @@ const Home = (props) => {
   )
 }
 export async function getStaticProps(){
+  console.log("buscando na api")
   const {data} = await axios.get("https://data.messari.io/api/v1/assets?limit=500&fields=id,slug,symbol,metrics/market_data/price_usd")
   return {
     props:{
