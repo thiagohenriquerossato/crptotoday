@@ -44,20 +44,20 @@ const Home = (props) => {
   return (
     <Container>
       <Head>
-        <title>Homepage</title>
+        <title>Crypto today</title>
       </Head>
+      <h1>Crptotoday</h1>
+        <p style={{marginTop:8, fontSize:16}}>Value of all cryptocurrencies</p>
         <ComboBox
           placeholder={selectedCrypto.slug}
           options={cryptoNames}
           enableAutocomplete
-          style={{background:"#121214", color:"#121214"}}
+          style={{background:"#121214", color:"#121214", marginTop:24}}
           inputStyles={{background:"#121214", color:"#e1e1e6"}}
           onSelect={(option) => handleSelectedCrypto(option)}
         />
         <p>{selectedCrypto.symbol} 1 = US$ {selectedCrypto.price_usd}</p>
-        <h1>Crptotoday</h1>
-        <p>Value of all cryptocurrencies</p>
-        <h4>Developed by <a href="https://github.com/thiagohenriquerossato/">Thiago Rossato</a></h4>
+        <h4 style={{marginTop:24, fontSize:12}}>Developed by <a href="https://github.com/thiagohenriquerossato/">Thiago Rossato</a></h4>
     </Container>
   )
 }
